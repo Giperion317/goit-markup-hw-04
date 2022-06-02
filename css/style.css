@@ -153,13 +153,16 @@ body{
     display: flex;
 }
 
+.contact-header-item{
+    display: flex;
+    align-items: center;
+}
+
 .contact-header-item:not(:last-child){
     margin-right: 50px;
 }
 
 .contact-header-link{
-    display: block;
-
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -168,9 +171,21 @@ body{
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
 .contact-header-link:hover,
 .contact-header-link:focus{
     color: var(--accent-color);
+}
+
+.contact-header-icon{
+
+    margin-right: 10px;
+    fill: var(--text-color);
+}
+
+.contact-header-link:hover .contact-header-icon,
+.contact-header-link:hover .contact-header-icon{
+    fill: var(--accent-color);
 }
 
 /* --/page header-- */
