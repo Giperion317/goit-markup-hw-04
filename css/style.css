@@ -104,6 +104,35 @@ body {
     overflow: hidden;
 }
 
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-list-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--secondory-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+    fill: var(--secondory-color);
+}
+
 /* --/components-- */
 
 /* --page header-- */
@@ -361,35 +390,6 @@ body {
     margin-bottom: 16px;
 }
 
-.social-list {
-    display: flex;
-    justify-content: center;
-}
-
-.social-list-item:not(:last-child) {
-    margin-right: 10px;
-}
-
-.social-list-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--secondory-color);
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-    background-color: var(--accent-color);
-}
-
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-    fill: var(--secondory-color);
-}
-
 .social-list-icon {
     fill: var(--icon-color);
 }
@@ -439,8 +439,6 @@ body {
     .regular-customers-icon{
         fill: var(--icon-color);
     }
-
-
 
 /* --section regular costomers-- */
 
@@ -526,6 +524,14 @@ body {
     padding-bottom: 60px;
 }
 
+.page-footer-conteiner{
+    display: flex;
+}
+
+.block-contact-footer{
+    margin-right: 70px;
+}
+
 .logo-footer {
     display: block;
     margin-bottom: 20px;
@@ -551,6 +557,28 @@ body {
 .contact-link:hover,
 .contact-link:focus {
     color: var(--accent-color);
+}
+
+.social-footer-title{
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondory-color);
+        
+    margin-bottom: 20px;
+}
+
+.social-list-footer {
+    justify-content: start;
+}
+
+.social-list-link-footer{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-list-icon-footer{
+    fill: var(--secondory-color);
 }
 
 /* --/footer-- */
