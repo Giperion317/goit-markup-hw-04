@@ -370,6 +370,8 @@ body {
 .our-team-item-wrapper {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    background-color: var(--secondory-color);
 }
 
 .our-team-image-title {
