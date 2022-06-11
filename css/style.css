@@ -121,11 +121,19 @@ body {
     height: 44px;
     border-radius: 50%;
     background-color: var(--secondory-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
     background-color: var(--accent-color);
+}
+
+.social-list-icon {
+    fill: var(--icon-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -170,6 +178,8 @@ body {
 
     padding-top: 32px;
     padding-bottom: 32px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -199,6 +209,8 @@ body {
 
     padding-top: 32px;
     padding-bottom: 32px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-header-link:hover,
@@ -264,6 +276,8 @@ body {
     border-radius: 4px;
 
     padding: 10px 32px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -392,10 +406,6 @@ body {
     margin-bottom: 16px;
 }
 
-.social-list-icon {
-    fill: var(--icon-color);
-}
-
 /* --/section our team-- */
 
 /* --section regular costomers-- */
@@ -427,6 +437,8 @@ body {
         height: 100%;
         border: 1px solid var(--icon-color);
         border-radius: 4px;
+
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .regular-customers-link:hover,
@@ -443,6 +455,8 @@ body {
 
     .regular-customers-icon{
         fill: var(--icon-color);
+
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 /* --section regular costomers-- */
@@ -565,6 +579,8 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-text {
@@ -599,3 +615,58 @@ body {
 }
 
 /* --/footer-- */
+
+/* --backdrop-- */
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden.modal{
+    transform: scale(0.75);
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%), scale(1);
+
+    width: 528px;
+    height: 580px;
+    background-color: var(--secondory-color);
+}
+
+.modal-clous-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* --/backdrop-- */
